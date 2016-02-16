@@ -46,13 +46,5 @@ public class Sequential
 	{
 		produce( THE_LIST );
 		consume( THE_LIST );
-		
-		/*
-		The above does the same thing as:
-		
-		for( int i = 0; i < 1000; i++ ) {
-			THE_LIST.add( "Product number " + i );
-		}
-		*/
 	}
 }
