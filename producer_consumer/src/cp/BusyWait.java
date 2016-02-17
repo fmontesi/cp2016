@@ -39,7 +39,6 @@ public class BusyWait
 				Product prod = new Product( "Flower Bouquet", "Amount: " + i + ". By thread: " + threadName );
 				list.add( prod );
 				System.out.println( threadName + " producing " + prod );
-				
 			}
 		} );
 	}
