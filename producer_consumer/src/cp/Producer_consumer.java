@@ -14,7 +14,5 @@ public class Producer_consumer
 		// BlockingQueue.run();
 		// Delivery.run();
 		// ConveyorBelt.run();
-		ConsumerExecutor.run();
-		// Exercise: Consumers take 5
 	}
 }
