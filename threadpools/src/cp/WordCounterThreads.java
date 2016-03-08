@@ -9,22 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author Fabrizio Montesi <fmontesi@imada.sdu.dk>
  */
 public class WordCounterThreads
-{
-	private static class Product {
-		private final String name;
-		private final String attributes;
-		public Product( String name, String attributes )
-		{
-			this.name = name;
-			this.attributes = attributes;
-		}
-		
-		public String toString()
-		{
-			return name + ". " + attributes;
-		}
-	}
-	
+{	
 	private static int letterCount( String str, char ch, int start, int end )
 	{
 		if ( end - start <= 0 ) {
@@ -43,8 +28,7 @@ public class WordCounterThreads
 	
 	private static int wordCount( String str, int start, int end )
 	{
-		// May contains bugs!
-		// The right number is: 14801631
+		// The right total number is: 14801631
 		if ( end - start <= 0 ) {
 			return 0;
 		}
@@ -67,6 +51,7 @@ public class WordCounterThreads
 
 	public static void run()
 	{
+		// Contains bugs!
 		try {
 			File file = new File( "bigtext.txt" );
 			// File file = new File( "test.txt" );

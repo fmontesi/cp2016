@@ -8,26 +8,10 @@ import java.io.FileInputStream;
  * @author Fabrizio Montesi <fmontesi@imada.sdu.dk>
  */
 public class WordCounterSequential
-{
-	private static class Product {
-		private final String name;
-		private final String attributes;
-		public Product( String name, String attributes )
-		{
-			this.name = name;
-			this.attributes = attributes;
-		}
-		
-		public String toString()
-		{
-			return name + ". " + attributes;
-		}
-	}
-	
+{	
 	private static int wordCount( String str )
 	{
-		// May contains bugs!
-		// The right number is: 14801631
+		// The right total number is: 14801631
 		if ( str.isEmpty() ) {
 			return 0;
 		}
@@ -51,6 +35,7 @@ public class WordCounterSequential
 	public static void run()
 	{
 		try {
+			// Contains bugs!
 			File file = new File( "bigtext.txt" );
 			FileInputStream is = new FileInputStream( file );
 			final long size = file.length();
