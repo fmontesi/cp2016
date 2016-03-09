@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  *
  * @author Fabrizio Montesi <fmontesi@imada.sdu.dk>
  */
-public class WordCounterThreads
+public class LetterCounterThreads
 {	
 	private static int letterCount( String str, char ch, int start, int end )
 	{

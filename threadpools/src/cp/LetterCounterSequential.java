@@ -7,7 +7,7 @@ import java.io.FileInputStream;
  *
  * @author Fabrizio Montesi <fmontesi@imada.sdu.dk>
  */
-public class WordCounterSequential
+public class LetterCounterSequential
 {	
 	private static int wordCount( String str )
 	{

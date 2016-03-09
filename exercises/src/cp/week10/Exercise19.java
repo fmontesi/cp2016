@@ -7,8 +7,11 @@ package cp.week10;
 public class Exercise19
 {
 	/*
-	- Make a parallel word counter instead of letter counter.
-	- For simplicity, split the string in an array String[] using string.split("\\s+")
-	- Use manual Thread objects and start them to do the parallel computation.
+	- Change the letter counter to count the occurrences of every letter in the text, using a Map.
+	- For example, for the text "hello", the resulting map should contain:
+		"h" -> 1
+		"e" -> 1
+		"l" -> 2
+		"o" -> 1
 	*/
 }
