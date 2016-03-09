@@ -9,7 +9,7 @@ import java.io.FileInputStream;
  */
 public class LetterCounterSequential
 {	
-	private static int wordCount( String str )
+	private static int letterCount( String str )
 	{
 		// The right total number is: 14801631
 		if ( str.isEmpty() ) {
@@ -44,7 +44,7 @@ public class LetterCounterSequential
 			final String str = new String( content );
 			
 			long tStart = System.currentTimeMillis();
-			System.out.println( wordCount( str ) );
+			System.out.println( letterCount( str ) );
 			System.out.println( "Sequential took: " + (System.currentTimeMillis() - tStart) );
 		} catch( Exception e ) {
 			e.printStackTrace();
