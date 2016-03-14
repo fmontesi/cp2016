@@ -11,13 +11,16 @@ import java.util.List;
 public class WordFinder
 {
 	/**
-	 * Finds all the occurrences of a word in a directory.
+	 * Finds all the (case-sensitive) occurrences of a word in a directory.
+	 * 
+	 * The word must appear without punctuation, for example "hi," is not a valid
+	 * occurrence of "hi".
 	 * 
 	 * The search is recursive: if the directory contains subdirectories,
 	 * these are also searched and so on so forth (until there are no more
 	 * subdirectories).
 	 * 
-	 * @param word the word to find
+	 * @param word the word to find (does not contain whitespaces or punctuation)
 	 * @param dir the directory to search
 	 * @return a list of results ({@link Result}), which tell where the word was found
 	 */
