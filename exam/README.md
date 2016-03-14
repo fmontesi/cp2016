@@ -1,8 +1,3 @@
-# Warning: Incomplete!
-
-This document is still incomplete! You will receive an e-mail when it will be
-finalised (which will happen soon!).
-
 # Exam Instructions
 
 To pass the course, you have to prepare a software project and a written report
@@ -12,7 +7,9 @@ on it. Everything has to be uploaded as a single zip file containing the followi
 
 Detailed instructions on the two items are given below.
 
-The deadline for uploading the project on Blackboard is: XX April 2016 at midnight.
+## Hand-in
+
+An assignment will be opened on Blackboard for handing in the project. The deadline for uploading the project on Blackboard will be: 25 April 2016 at midnight.
 
 ## Report
 
@@ -30,14 +27,41 @@ you last edited the document). The report must contain the following sections:
   readability of your code? Or, did you sacrifice readability for improving
   efficiency? Is there a way to improve how you coordinate concurrent computation?
 
+Inspiration points to discuss advantages and
+limitations:
+- Readability
+- Speed
+- Memory consumption
+- Reusability (the code can be reused in different contexts)
+- Scalability (scales well with the number of cores, or amount of memory)
+- Reliability (handling of errors/exceptions)
+
 ## Software project
 
-The `code` subdirectory in the zip file must contain a valid Java Application
-project created using the [NetBeans IDE](https://netbeans.org/), as the
-examples developed during the lectures. This will ensure that I will be able to
-compile the project. (I will run `ant jar` in the `code` directory to compile.)
+The `code` subdirectory in the zip file must contain a `wordfinder` subdirectory that implements the `WordFinder` class found in this directory (see `WordFinder` in the subdirectory `wordfinder/src/cp`).
+To be sure that you are getting the class names and method signatures right, copy the `wordfinder` subdirectory from this repository and start from there. Concretely, you must implement the methods `findAll`, `findAny` and `stats` in class `WordFinder`.
+The class contains documentation about what these methods are supposed to do.
 
-If the code does not compile the exam is automatically failed, so make sure that
-it does!
+I suggest that you use the [NetBeans IDE](https://netbeans.org/) to develop the project. The easiest way is to follow the steps below:
+- Open the project `wordfinder` that you have just copied in your filesystem.
+- Edit method `main` in class `Main` to test the methods you have implemented in `WordFinder`. Your code in `Main.main` will be completely disregarded in the evaluation. Only the implementation of `WordFinder` will be evaluated.
 
-[... Work in Progress]
+Using NetBeans is an easy way to ensure that I will be able to compile your code correctly. If the code does not compile the exam is automatically failed, so make sure that it does!
+
+
+# Frequently Asked Questions and Comments
+
+Including external libraries is forbidden.
+You can only use the Java standard library.
+
+Be careful: when I measure the time it takes your method calls to terminate, having threads that have not terminated may slow down the measurement.
+
+`findAll`:
+- If the same word appears more than once in the same file, then there should be a Result for each occurrence (even if the occurrences are on the same line).
+- Parameter `word` is never a sentence: it does not contain whitespaces (spaces, tabs, newlines, more specifically the `\s` class in regular expressions in Java) but may contain punctuation.
+- The word must be an exact match: it is case-sensitive and may contain punctuation. So, for example: "hi," is not a valid occurrence of "hi"; "hi," is a valid occurrence of "hi,"; ".hi" is a valid occurrence of ".hi" but not "hi". This does not mean that the word is necessarily between whitespaces, for example it could appear at the beginning or end of a file.
+
+`stats`:
+- If multiple words are the least frequently appearing (or the most frequently appearing), you can return any one of them in `leastFrequent` (respectively `mostFrequent`).
+- The method is case-sensitive, as the others.
+- Words can contain punctuation. A word is what you would get as an element by splitting a line by whitespacing, for example: `line.split( "\\s+" )`. So, for example, "hi," is a word.
