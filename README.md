@@ -1,2 +1,7 @@
-# cp2016
-Code from the lectures on Concurrent Programming (2016) at the University of Southern Denmark
+# Concurrent Programming 2016
+
+This is the code repository for the course on Concurrent Programming (2016) at the University of Southern Denmark. The official course website is [http://fabriziomontesi.com/teaching/cp-2016/index.html](http://fabriziomontesi.com/teaching/cp-2016/index.html).
+
+- For exercises, see the `exercises` directory.
+- For the code developed during the lectures, see the `lectures` directory.
+- For instructions on the final exam, see the `exam` directory.
