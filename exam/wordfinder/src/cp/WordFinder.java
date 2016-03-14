@@ -12,6 +12,7 @@ public class WordFinder
 {
 	/**
 	 * Finds all the (case-sensitive) occurrences of a word in a directory.
+	 * Only text files should be considered (files ending with the .txt suffix).
 	 * 
 	 * The word must appear without punctuation, for example "hi," is not a valid
 	 * occurrence of "hi".

@@ -51,6 +51,9 @@ Using NetBeans is an easy way to ensure that I will be able to compile your code
 
 # Frequently Asked Questions and Comments
 
+Only text files should be looked into for searching words.
+A text file is a file ending with the `.txt` suffix.
+
 Including external libraries is forbidden.
 You can only use the Java standard library.
 
