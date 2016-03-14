@@ -13,7 +13,7 @@ An assignment will be opened on Blackboard for handing in the project. The deadl
 
 ## Report
 
-The report must be at the most 3 page long. In the first page, you must state
+The report must be written in English and be at the most 3 page long. In the first page, you must state
 the name of the course, your name, your e-mail address, and the date (in which
 you last edited the document). The report must contain the following sections:
 - Methodology. Here you explain how you designed your software. Give a brief
@@ -51,20 +51,22 @@ Using NetBeans is an easy way to ensure that I will be able to compile your code
 
 # Frequently Asked Questions and Comments
 
-Only text files should be looked into for searching words.
+- The project will be tested using Java 8.
+
+- Only text files should be looked into for searching words.
 A text file is a file ending with the `.txt` suffix.
 
-Including external libraries is forbidden.
+- Including external libraries is forbidden.
 You can only use the Java standard library.
 
-Be careful: when I measure the time it takes your method calls to terminate, having threads that have not terminated may slow down the measurement.
+- Be careful: when I measure the time it takes your method calls to terminate, having threads that have not terminated may slow down the measurement.
 
-`findAll`:
-- If the same word appears more than once in the same file, then there should be a Result for each occurrence (even if the occurrences are on the same line).
-- Parameter `word` is never a sentence: it does not contain whitespaces (spaces, tabs, newlines, more specifically the `\s` class in regular expressions in Java) but may contain punctuation.
-- The word must be an exact match: it is case-sensitive and may contain punctuation. So, for example: "hi," is not a valid occurrence of "hi"; "hi," is a valid occurrence of "hi,"; ".hi" is a valid occurrence of ".hi" but not "hi". This does not mean that the word is necessarily between whitespaces, for example it could appear at the beginning or end of a file.
+- `findAll`:
+  * If the same word appears more than once in the same file, then there should be a Result for each occurrence (even if the occurrences are on the same line).
+  * Parameter `word` is never a sentence: it does not contain whitespaces (spaces, tabs, newlines, more specifically the `\s` class in regular expressions in Java) but may contain punctuation.
+  * The word must be an exact match: it is case-sensitive and may contain punctuation. So, for example: "hi," is not a valid occurrence of "hi"; "hi," is a valid occurrence of "hi,"; ".hi" is a valid occurrence of ".hi" but not "hi". This does not mean that the word is necessarily between whitespaces, for example it could appear at the beginning or end of a file.
 
-`stats`:
-- If multiple words are the least frequently appearing (or the most frequently appearing), you can return any one of them in `leastFrequent` (respectively `mostFrequent`).
-- The method is case-sensitive, as the others.
-- Words can contain punctuation. A word is what you would get as an element by splitting a line by whitespacing, for example: `line.split( "\\s+" )`. So, for example, "hi," is a word.
+- `stats`:
+  * If multiple words are the least frequently appearing (or the most frequently appearing), you can return any one of them in `leastFrequent` (respectively `mostFrequent`).
+  * The method is case-sensitive, as the others.
+  * Words can contain punctuation. A word is what you would get as an element by splitting a line by whitespacing, for example: `line.split( "\\s+" )`. So, for example, "hi," is a word.
