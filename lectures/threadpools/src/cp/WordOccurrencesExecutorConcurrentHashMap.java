@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -16,26 +16,28 @@ import java.util.concurrent.TimeUnit;
  *
  * @author Fabrizio Montesi <fmontesi@imada.sdu.dk>
  */
-public class WordOccurrencesExecutor
+public class WordOccurrencesExecutorConcurrentHashMap
 {	
 	private static ExecutorService executor =
 		Executors.newFixedThreadPool( 4 );
 	
 	private static final Map< String, Integer > occurrences
-		= new HashMap<>();
+		= new ConcurrentHashMap<>();
 
 	public static void wordCount( String line )
 	{
 		String[] words = line.split( "\\s+" );
-		synchronized( occurrences ) {
-			for( String word : words ) {
-				if ( occurrences.containsKey( word ) ) {
-					int count = occurrences.get( word );
-					occurrences.put( word, count + 1 );
+		for( String word : words ) {
+			occurrences.compute( word, (k,v) -> {
+				// k == word
+				// v is the value associated to word
+				// word -> v
+				if ( v == null ) {
+					return 1;
 				} else {
-					occurrences.put( word, 1 );
+					return v + 1;
 				}
-			}
+			} );
 		}
 	}
 	
