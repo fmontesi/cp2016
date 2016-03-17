@@ -79,3 +79,6 @@ You can only use the Java standard library.
   * If multiple words are the least frequently appearing (or the most frequently appearing), you can return any one of them in `leastFrequent` (respectively `mostFrequent`).
   * The method is case-sensitive, as the others.
   * Words can contain punctuation. A word is what you would get as an element by splitting a line by whitespacing, for example: `line.split( "\\s+" )`. So, for example, "hi," is a word.
+
+- How do I traverse directories?
+There are different ways to traverse directories in Java. See: [http://www.adam-bien.com/roller/abien/entry/listing_directory_contents_with_jdk](http://www.adam-bien.com/roller/abien/entry/listing_directory_contents_with_jdk) and [https://docs.oracle.com/javase/tutorial/essential/io/walk.html](https://docs.oracle.com/javase/tutorial/essential/io/walk.html). There is no "best" way for the project, since maybe one way will play nicer than the others with how you intend to program concurrency.
