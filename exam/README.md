@@ -81,4 +81,16 @@ You can only use the Java standard library.
   * Words can contain punctuation. A word is what you would get as an element by splitting a line by whitespacing, for example: `line.split( "\\s+" )`. So, for example, "hi," is a word.
 
 - How do I traverse directories?
-There are different ways to traverse directories in Java. See: [http://www.adam-bien.com/roller/abien/entry/listing_directory_contents_with_jdk](http://www.adam-bien.com/roller/abien/entry/listing_directory_contents_with_jdk) and [https://docs.oracle.com/javase/tutorial/essential/io/walk.html](https://docs.oracle.com/javase/tutorial/essential/io/walk.html). There is no "best" way for the project, since maybe one way will play nicer than the others with how you intend to program concurrency.
+There are different ways to traverse directories in Java. See: [http://www.adam-bien.com/roller/abien/entry/listing_directory_contents_with_jdk](http://www.adam-bien.com/roller/abien/entry/listing_directory_contents_with_jdk) and [https://docs.oracle.com/javase/tutorial/essential/io/walk.html](https://docs.oracle.com/javase/tutorial/essential/io/walk.html). There is no "best" way for the project, since maybe one way will play nicer than the others with how you intend to program concurrency. You can also see the (simple!) example in `lectures`.
+
+- How do I get test data?
+Open [https://www.github.com/](https://www.github.com/) and find a software project full of source files, for example [https://github.com/dthree/cash](https://github.com/dthree/cash). Download the project, for example by executing `git clone https://github.com/dthree/cash`. Rename lots of text files such that they have a `.txt` suffix, for example by running: `find . -name "*.js" -exec bash -c 'mv "$1" "$(sed "s/\.js$/.txt/" <<< "$1")"' - '{}' \;`. You now have a directory full of (probably small) text files. To add some big files, go to [http://www.lipsum.com/](http://www.lipsum.com/), generate a big chunk of text and create a file with multiple copies of it. (I recommend reaching at least 50MB or similar, but feel free to go higher!)
+
+- How many cores will be used in the evaluation?
+Different set-ups will be used: 1 core, 2 cores, 3 cores, 4 cores. So your project should adapt to the number of cores available on the machine. The same CPU will always be used.
+
+- What about the storage?
+I will use an SSD for testing the projects.
+
+- What encoding will the files be in?
+UTF-8. I will not use any weird characters that require thinking of more than a Java `char`. I do not recommend using byte representations of strings.
