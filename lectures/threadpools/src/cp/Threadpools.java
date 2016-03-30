@@ -12,7 +12,9 @@ public class Threadpools
 		// LetterCounterThreads.run();
 		// WordCounter.run();
 		// doAndMeasure( "", WordCounterExecutor::run );
-		doAndMeasure( "", WordOccurrencesFuture::run );
+		// doAndMeasure( "", WordOccurrencesExecutor::run );
+		// doAndMeasure( "", WordOccurrencesFuture::run );
+		doAndMeasure( "", WordOccurrencesStream::run );
 		// WordCounterFuture.run();
 	}
 	

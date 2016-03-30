@@ -20,6 +20,7 @@ public class WordCounterStream
 				.lines()
 				.parallel()
 				.mapToInt( line -> line.split( "\\s+" ).length )
+				// .reduce( 0, (n1, n2) -> n1 + n2 ); // Same as:
 				.sum();
 			System.out.println( total );
 		} catch( Exception e ) {
