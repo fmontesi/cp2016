@@ -94,3 +94,6 @@ I will use an SSD for testing the projects.
 
 - What encoding will the files be in?
 UTF-8. I will not use any weird characters that require thinking of more than a Java `char`. I do not recommend using byte representations of strings.
+
+- How do I de-activate CPU cores in Linux?
+See [http://www.cyberciti.biz/faq/debian-rhel-centos-redhat-suse-hotplug-cpu/](http://www.cyberciti.biz/faq/debian-rhel-centos-redhat-suse-hotplug-cpu/).
