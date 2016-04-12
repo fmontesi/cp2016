@@ -13,8 +13,8 @@ public class WordFinder
 	 * Finds all the (case-sensitive) occurrences of a word in a directory.
 	 * Only text files should be considered (files ending with the .txt suffix).
 	 * 
-	 * The word must appear without punctuation, for example "hi," is not a valid
-	 * occurrence of "hi".
+	 * The word must be an exact match: it is case-sensitive and may contain punctuation.
+	 * See https://github.com/fmontesi/cp2016/tree/master/exam for more details.
 	 * 
 	 * The search is recursive: if the directory contains subdirectories,
 	 * these are also searched and so on so forth (until there are no more
