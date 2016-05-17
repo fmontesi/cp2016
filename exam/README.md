@@ -47,6 +47,8 @@ The `code` subdirectory in the zip file must contain a `wordfinder` subdirectory
 To be sure that you are getting the class names and method signatures right, copy the `wordfinder` subdirectory from this repository and start from there. Concretely, you must implement the methods `findAll`, `findAny` and `stats` in class `WordFinder`.
 The class contains documentation about what these methods are supposed to do.
 
+The most important evaluation criterion for the project is how well concurrency is managed in the program. Handing in a project that does not use concurrency is an automatic fail!
+
 I suggest that you use the [NetBeans IDE](https://netbeans.org/) to develop the project. The easiest way is to follow the steps below:
 - Open the project `wordfinder` that you have just copied in your filesystem.
 - Edit method `main` in class `Main` to test the methods you have implemented in `WordFinder`. Your code in `Main.main` will be completely disregarded in the evaluation. Only the implementation of `WordFinder` will be evaluated.
